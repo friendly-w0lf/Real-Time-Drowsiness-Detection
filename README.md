@@ -2,22 +2,17 @@
 
 # Real-time Drowsiness Detection
 
-This project was made as a part of **DA526(Image processing with Machine Learning)** course taken by **Prof. Debanga R. Neog, DSAI, IITG** Jan-May 2023.
+
 It aims to develop a real-time drowsiness detection system for individuals in a video feed. The system will first detect faces in the video and then classify them as drowsy,low vigilant or awake using a pretrained model trained on a dataset of alert,low vigilant and drowsy individuals. The model will output a probability score for each class, and the system will use a threshold to determine whether the individual is drowsy or awake along with localisation of the class(bounding box). This approach can have practical applications in driver safety and workplace safety, but the system's accuracy will depend on the quality of the face detection algorithm, the training data, and the threshold chosen.
 
 
-Project Contributors
- - **Mayukh Das**
- - **Debarpan Jana**
- - **Bitan Guha Roy**
- - **Mahasin Hossen Munshi**
- - **Madhurima Sen**
+
 
 The github repo consists of 6 jupyter notebook files each of which performs a specific subtasks of the overall project.
-We have used [kaggle](https://www.kaggle.com) for training , have to somehow manage with  **GPU Tesla P100** 30 hrs of weekly quota.
+We have used [kaggle](https://www.kaggle.com) for training.
 ## 1. Dataset Collection and Preprocessing
 
-UTA-RLDD(Real Life Drowsiness Dataset)  is used for training and validation and custom dataset for testing, it was created for the task of multi- stage drowsiness detection, targeting not only extreme and easily visible cases, but also subtle cases of drowsiness. It consists of around 30 hours of RGB videos of **60** healthy participants. For each participant we obtained one video for each of three different classes: **awake, drowsy, and low vigilant**, for a total of **180** videos.
+UTA-RLDD(Real Life Drowsiness Dataset)  is used for training and validation and custom dataset for testing, it was created for the task of multi- stage drowsiness detection, targeting not only extreme and easily visible cases, but also subtle cases of drowsiness. 
 
 The three classes were explained to the participants as follows:
 1) Awake: Subjects were told that being alert meant they were experiencing no signs of sleepiness.
@@ -68,11 +63,3 @@ All the results and comments for our project is present in the [Project Report.p
 
 For viweing the runs in wandb refer [Drowsiness detection](https://wandb.ai/ipda526)
 
-## References
-1) [Deep Drowsiness Detection using YOLO, Pytorch and Python](https://youtu.be/tFNJGim3FXw)
-2) [UTA-RLDD Dataset](https://sites.google.com/view/utarldd/home)
-3) [Ultralytics, providing very efficient yolo implementation](https://github.com/ultralytics/yolov5)
-4) [Wandb, for hyperparameter tuning](https://wandb.ai)
-5) [Tensorflow](https://www.tensorflow.org)
-6) [Jonathan hui's blog on yolo](https://jonathan-hui.medium.com/real-time-object-detection-with-yolo-yolov2-28b1b93e2088#:~:text=YOLO%20uses%20sum%2Dsquared%20error,box%20and%20the%20ground%20truth).
-7) [About Metrics used in yolo ](https://towardsdatascience.com/on-object-detection-metrics-with-worked-example-216f173ed31e)
